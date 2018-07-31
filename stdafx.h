@@ -14,7 +14,7 @@
 /*
 BG Proto
 */
-
+#include <WinSock2.h>
 #include <Windows.h>
 
 // std
@@ -34,5 +34,14 @@ BG Proto
 #include "BGConfigManager.h"
 #include "BGLogManager.h"
 
+#include "BGUtil.h"
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
+
+
+// CPPRESTSEK
+#include <cpprest/json.h>
+#include <cpprest/http_listener.h>
+#include <cpprest/uri.h>
+#include <cpprest/asyncrt_utils.h>
+#include <cpprest/http_client.h>
