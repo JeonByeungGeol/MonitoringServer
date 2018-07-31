@@ -25,6 +25,12 @@
     <Filter Include="싱글톤">
       <UniqueIdentifier>{1c40cf89-031b-4ad2-96a6-070a5d83b07f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HttpServer">
+      <UniqueIdentifier>{e9098fec-2e4d-4f15-8e63-bd5221e5c551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HttpServer\처리기">
+      <UniqueIdentifier>{cff9ff9c-4c3c-4184-a808-39c22c88b705}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -54,6 +60,18 @@
     <ClInclude Include="BGSingleton.h">
       <Filter>싱글톤</Filter>
     </ClInclude>
+    <ClInclude Include="BGHttpMainHandler.h">
+      <Filter>HttpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="BGHttpServer.h">
+      <Filter>HttpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="IBGHttpHandler.h">
+      <Filter>HttpServer\처리기</Filter>
+    </ClInclude>
+    <ClInclude Include="BGUtil.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,6 +91,15 @@
     </ClCompile>
     <ClCompile Include="BGSingleton.cpp">
       <Filter>싱글톤</Filter>
+    </ClCompile>
+    <ClCompile Include="BGHttpMainHandler.cpp">
+      <Filter>HttpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="BGHttpServer.cpp">
+      <Filter>HttpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="BGUtil.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
