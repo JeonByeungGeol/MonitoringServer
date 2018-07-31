@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="설정">
+      <UniqueIdentifier>{10ec78fc-a884-4662-9ce5-71ae0678c935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="공통">
+      <UniqueIdentifier>{f276c2a3-f528-403a-9c64-9e14296ef756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="로그">
+      <UniqueIdentifier>{affe7291-f24d-4dac-a1b6-3b37ff592c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="싱글톤">
+      <UniqueIdentifier>{1c40cf89-031b-4ad2-96a6-070a5d83b07f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +36,24 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="BGConfigManager.h">
+      <Filter>설정</Filter>
+    </ClInclude>
+    <ClInclude Include="BGConst.h">
+      <Filter>공통</Filter>
+    </ClInclude>
+    <ClInclude Include="BGLogManager.h">
+      <Filter>로그</Filter>
+    </ClInclude>
+    <ClInclude Include="BGLog.h">
+      <Filter>로그</Filter>
+    </ClInclude>
+    <ClInclude Include="BGLogEnum.h">
+      <Filter>로그</Filter>
+    </ClInclude>
+    <ClInclude Include="BGSingleton.h">
+      <Filter>싱글톤</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -32,5 +62,22 @@
     <ClCompile Include="MonitoringServer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BGConfigManager.cpp">
+      <Filter>설정</Filter>
+    </ClCompile>
+    <ClCompile Include="BGLog.cpp">
+      <Filter>로그</Filter>
+    </ClCompile>
+    <ClCompile Include="BGLogManager.cpp">
+      <Filter>로그</Filter>
+    </ClCompile>
+    <ClCompile Include="BGSingleton.cpp">
+      <Filter>싱글톤</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bg_config.ini">
+      <Filter>설정</Filter>
+    </None>
   </ItemGroup>
 </Project>

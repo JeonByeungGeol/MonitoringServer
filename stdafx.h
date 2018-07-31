@@ -11,5 +11,28 @@
 #include <tchar.h>
 
 
+/*
+BG Proto
+*/
+
+#include <Windows.h>
+
+// std
+#include <iostream>
+#include <string>
+#include <fstream>
+
+#include <map>
+#include <queue>
+#include <vector>
+
+#include <thread>
+#include <mutex>
+
+#include "BGConst.h"
+#include "BGSingleton.h"
+#include "BGConfigManager.h"
+#include "BGLogManager.h"
+
 
 // TODO: 프로그램에 필요한 추가 헤더는 여기에서 참조합니다.
