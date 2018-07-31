@@ -3,6 +3,8 @@
 #include "BGConfigManager.h"
 #include "BGLogManager.h"
 
+#include "BGHttpServer.h"
+
 /**
  * std::once_flag는 초기화 하지 않으며 std::call_once와 연동되어 멀티스레드 환경에서
  * 단 한번만 실행되는 것을 운영체제 차원에서 보장해 주도록 구현되었다.
@@ -28,6 +30,7 @@
 #define g_LogManager BGSingleton::Instance()->GetLogManager()
 
 /** 사용자 정의*/
+#define g_HttpServer BGSingleton::Instance()->GetHttpServer()
 
 class BGSingleton
 {
@@ -57,9 +60,13 @@ private:
 	BGConfigManager m_ConfigManager;
 	BGLogManager m_LogManager;
 
+	BGHttpServer m_HttpServer;
 
 public:
 	BGConfigManager& GetConfigManager() { return m_ConfigManager; }
 	BGLogManager& GetLogManager() { return m_LogManager; }
+
+	BGHttpServer& GetHttpServer() { return m_HttpServer; }
+
 };
 
