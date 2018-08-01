@@ -28,6 +28,7 @@ BG Proto
 
 #include <thread>
 #include <mutex>
+#include <shared_mutex>
 
 #include "BGConst.h"
 #include "BGSingleton.h"

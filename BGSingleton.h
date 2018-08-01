@@ -2,6 +2,7 @@
 
 #include "BGConfigManager.h"
 #include "BGLogManager.h"
+#include "BGTimer.h"
 
 #include "BGHttpServer.h"
 
@@ -28,6 +29,7 @@
 /** define으로 정의*/
 #define g_Config BGSingleton::Instance()->GetConfigManager()
 #define g_LogManager BGSingleton::Instance()->GetLogManager()
+#define g_Timer BGSingleton::Instance()->GetTimer()
 
 /** 사용자 정의*/
 #define g_HttpServer BGSingleton::Instance()->GetHttpServer()
@@ -59,12 +61,14 @@ public:
 private:
 	BGConfigManager m_ConfigManager;
 	BGLogManager m_LogManager;
+	BGTimer m_Timer;
 
 	BGHttpServer m_HttpServer;
 
 public:
 	BGConfigManager& GetConfigManager() { return m_ConfigManager; }
 	BGLogManager& GetLogManager() { return m_LogManager; }
+	BGTimer& GetTimer() { return m_Timer; }
 
 	BGHttpServer& GetHttpServer() { return m_HttpServer; }
 

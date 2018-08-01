@@ -31,6 +31,9 @@
     <Filter Include="HttpServer\처리기">
       <UniqueIdentifier>{cff9ff9c-4c3c-4184-a808-39c22c88b705}</UniqueIdentifier>
     </Filter>
+    <Filter Include="타이머">
+      <UniqueIdentifier>{822b0177-5063-4865-9dc0-f41cf83ede60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -75,6 +78,15 @@
     <ClInclude Include="BGErrorEnum.h">
       <Filter>공통</Filter>
     </ClInclude>
+    <ClInclude Include="BGTimer.h">
+      <Filter>타이머</Filter>
+    </ClInclude>
+    <ClInclude Include="IBGTimerObject.h">
+      <Filter>타이머</Filter>
+    </ClInclude>
+    <ClInclude Include="TestTimerObject.h">
+      <Filter>타이머</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -103,6 +115,12 @@
     </ClCompile>
     <ClCompile Include="BGUtil.cpp">
       <Filter>공통</Filter>
+    </ClCompile>
+    <ClCompile Include="BGTimer.cpp">
+      <Filter>타이머</Filter>
+    </ClCompile>
+    <ClCompile Include="TestTimerObject.cpp">
+      <Filter>타이머</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
