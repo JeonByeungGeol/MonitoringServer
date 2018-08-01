@@ -31,7 +31,7 @@ private:
 
 	http_listener m_Listener;
 
-	std::map<std::str, IBGHttpHandler*> m_CommandMap;
+	std::map<std::string, IBGHttpHandler*> m_CommandMap;
 	std::mutex m_CommandMapLock;
 };
 
