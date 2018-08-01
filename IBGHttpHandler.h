@@ -1,5 +1,7 @@
 #pragma once
 
+#include "BGErrorEnum.h"
+
 class IBGHttpHandler
 {
 public:
