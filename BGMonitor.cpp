@@ -44,6 +44,8 @@ void BGMonitor::Run()
 {
 	BG_LOG_DEBUG("monitor run start");
 
+	int timer = g_Config.GetInt("MONITOR.Timer");
+
 	while (1) {
 		m_RunSharedLock.lock_shared();
 		if (m_bTimerRunning == false) {
@@ -51,11 +53,12 @@ void BGMonitor::Run()
 			break;
 		}
 		m_RunSharedLock.unlock_shared();
+		
+		WebMonitor();
 
+		TcpMonitor();
 
-
-
-
+		Sleep(timer);
 	}
 	
 	BG_LOG_DEBUG("monitor run exit");
@@ -63,7 +66,29 @@ void BGMonitor::Run()
 
 BG_ERROR::Timer BGMonitor::TimerProcess(int type, BGTimerParam params)
 {
+	switch (type) {
+	case 0:
+		break;
 
+	case 1:
+		break;
+
+	default:
+		return BG_ERROR::Timer::BG_INVALID_TIMER_EVENT_TYPE;
+	}
 
 	return BG_ERROR::Timer::BG_NONE;
+}
+
+void BGMonitor::WebMonitor()
+{
+	BGTimerParam params;
+
+	g_Timer.Push(0, this, 0, params);
+
+}
+
+void BGMonitor::TcpMonitor()
+{
+
 }

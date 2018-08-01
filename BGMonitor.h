@@ -11,11 +11,13 @@ public:
 	
 	/** 서버 모니터를 종료합니다.*/
 	bool Stop();
-
 	
-
+	/** IBGTimerObject 상속 구현부*/
 	virtual BG_ERROR::Timer TimerProcess(int type, BGTimerParam params);
 
+	void WebMonitor();
+
+	void TcpMonitor();
 
 private:
 	/** 모니터가 동작하고 있는지 나타내는 값과 그 값을 동기화 하기 위한 뮤텍스*/
@@ -29,6 +31,6 @@ private:
 	std::thread* RunSpawn();
 
 	/** 타이머에서 동작할 스레드 입니다. */
-	void Run();
+	void Run();	
 };
 
