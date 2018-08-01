@@ -2,12 +2,18 @@
 #include "BGUtil.h"
 
 
-std::string BGUtil::ToString(std::wstring)
+std::string BGUtil::ToString(std::wstring wstr)
 {
-	return std::string();
+	std::string str;
+	str.assign(wstr.begin(), wstr.end());
+
+	return str;
 }
 
-std::wstring BGUtil::ToWString(std::string)
+std::wstring BGUtil::ToWString(std::string str)
 {
-	return std::wstring();
+	std::wstring wstr;
+	wstr.assign(str.begin(), str.end());
+
+	return wstr;
 }
