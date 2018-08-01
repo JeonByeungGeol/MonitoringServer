@@ -21,6 +21,11 @@ int main()
 		return -1;
 	}
 
+	if (!g_Monitor.Start()) {
+		BG_LOG_ERROR("g_Monitor.Start failed");
+		return -1;
+	}
+
 	BG_LOG_TRACE("START");
 
 	while (1)
@@ -35,6 +40,11 @@ int main()
 	}
 
 	BG_LOG_TRACE("END");
+
+	if (!g_Monitor.Stop()) {
+		BG_LOG_ERROR("g_Monitor.Stop failed");
+		return -1;
+	}
 
 	if (!g_Timer.Stop()) {
 		BG_LOG_ERROR("g_Timer.Stop failed");

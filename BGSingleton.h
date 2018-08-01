@@ -5,6 +5,7 @@
 #include "BGTimer.h"
 
 #include "BGHttpServer.h"
+#include "BGMonitor.h"
 
 /**
  * std::once_flag는 초기화 하지 않으며 std::call_once와 연동되어 멀티스레드 환경에서
@@ -33,6 +34,8 @@
 
 /** 사용자 정의*/
 #define g_HttpServer BGSingleton::Instance()->GetHttpServer()
+#define g_Monitor BGSingleton::Instance()->GetMonitor()
+
 
 class BGSingleton
 {
@@ -64,6 +67,7 @@ private:
 	BGTimer m_Timer;
 
 	BGHttpServer m_HttpServer;
+	BGMonitor m_Monitor;
 
 public:
 	BGConfigManager& GetConfigManager() { return m_ConfigManager; }
@@ -71,6 +75,6 @@ public:
 	BGTimer& GetTimer() { return m_Timer; }
 
 	BGHttpServer& GetHttpServer() { return m_HttpServer; }
-
+	BGMonitor& GetMonitor() { return m_Monitor; }
 };
 
