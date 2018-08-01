@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="BGConfigManager.h" />
     <ClInclude Include="BGConst.h" />
+    <ClInclude Include="BGErrorEnum.h" />
     <ClInclude Include="BGHttpMainHandler.h" />
     <ClInclude Include="BGHttpServer.h" />
     <ClInclude Include="BGLog.h" />

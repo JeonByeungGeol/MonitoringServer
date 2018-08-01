@@ -70,7 +70,10 @@
       <Filter>HttpServer\처리기</Filter>
     </ClInclude>
     <ClInclude Include="BGUtil.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>공통</Filter>
+    </ClInclude>
+    <ClInclude Include="BGErrorEnum.h">
+      <Filter>공통</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,7 +102,7 @@
       <Filter>HttpServer</Filter>
     </ClCompile>
     <ClCompile Include="BGUtil.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>공통</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
